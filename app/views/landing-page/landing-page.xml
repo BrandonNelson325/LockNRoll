@@ -4,7 +4,7 @@
     <GridLayout>
         <StackLayout verticalAlignment="center" horizontalAlignment="center">
             <!-- Logo Placeholder -->
-            <Image src="/assets/dicelogo-1024.jpg" class="text-center" fontSize="128" margin="32" />
+            <Image src="~/assets/dicelogo-1024.jpg" class="text-center" fontSize="128" margin="32" />
             <Label text="Lock N' Roll" class="title" />
             <Button text="New Game" tap="{{ onNewGame }}" class="btn btn-primary" margin="16" />
         </StackLayout>
