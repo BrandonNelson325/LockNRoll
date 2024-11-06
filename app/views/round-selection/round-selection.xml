@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Select Rounds" />
+    <StackLayout class="p-4">
+        <Label text="Select Number of Rounds" class="title" />
+        <Label text="How many rounds would you like to play?" class="subtitle" />
+        
+        <WrapLayout horizontalAlignment="center" class="m-4">
+            <Button text="10" tap="{{ selectRounds }}" class="btn btn-primary" margin="8" padding="20" fontSize="24" />
+            <Button text="15" tap="{{ selectRounds }}" class="btn btn-primary" margin="8" padding="20" fontSize="24" />
+            <Button text="20" tap="{{ selectRounds }}" class="btn btn-primary" margin="8" padding="20" fontSize="24" />
+            <Button text="25" tap="{{ selectRounds }}" class="btn btn-primary" margin="8" padding="20" fontSize="24" />
+        </WrapLayout>
+    </StackLayout>
+</Page>

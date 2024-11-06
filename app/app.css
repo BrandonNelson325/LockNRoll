@@ -1,0 +1,173 @@
+.page {
+    background-color: #f3f4f6;
+}
+.ns-dark .page {
+    background-color: #1f2937;
+}
+
+.btn {
+    color: white;
+    font-size: 16;
+    font-weight: bold;
+    padding: 12;
+    border-radius: 8;
+    margin: 4;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+}
+
+.btn-success {
+    background-color: #10b981;
+}
+
+.btn-danger {
+    background-color: #ef4444;
+}
+
+.btn-disabled {
+    background-color: #9ca3af;
+    opacity: 0.5;
+}
+
+.btn-icon {
+    padding: 8;
+    margin: 0;
+    min-width: 40;
+    background-color: transparent;
+}
+
+.btn-icon-compact {
+    padding: 2;
+    margin: 0;
+    min-width: 28;
+    background-color: transparent;
+}
+
+.title {
+    color: #1f2937;
+    font-size: 32;
+    font-weight: bold;
+    text-align: center;
+    margin: 16 0;
+}
+.ns-dark .title {
+    color: white;
+}
+
+.subtitle {
+    color: #1f2937;
+    font-size: 20;
+    font-weight: 500;
+    text-align: center;
+    margin: 8 0;
+}
+.ns-dark .subtitle {
+    color: #e5e7eb;
+}
+
+.game-info {
+    color: #1f2937;
+    font-size: 24;
+    font-weight: bold;
+    text-align: center;
+    margin: 8 0;
+}
+.ns-dark .game-info {
+    color: white;
+}
+
+.input {
+    background-color: #f9fafb;
+    color: #1f2937;
+    padding: 12;
+    border-radius: 8;
+    margin: 8;
+    font-size: 16;
+    font-weight: 500;
+    border-width: 1;
+    border-color: #e5e7eb;
+    placeholder-color: #6b7280;
+}
+.ns-dark .input {
+    background-color: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+.input-compact {
+    background-color: #f9fafb;
+    color: #1f2937;
+    padding: 4;
+    border-radius: 6;
+    margin: 2;
+    font-size: 14;
+    height: 32;
+    border-width: 1;
+    border-color: #e5e7eb;
+    placeholder-color: #6b7280;
+}
+.ns-dark .input-compact {
+    background-color: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+.player-status {
+    background-color: white;
+    padding: 12;
+    border-bottom-width: 1;
+    border-color: #e5e7eb;
+    margin: 4;
+    border-radius: 8;
+}
+.ns-dark .player-status {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+.player-status-compact {
+    background-color: white;
+    padding: 4;
+    border-bottom-width: 1;
+    border-color: #e5e7eb;
+    margin: 1;
+    border-radius: 6;
+}
+.ns-dark .player-status-compact {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+.player-name {
+    color: #1f2937;
+    font-size: 16;
+    font-weight: bold;
+}
+.ns-dark .player-name {
+    color: white;
+}
+
+.player-score {
+    color: #1f2937;
+    font-size: 16;
+    text-align: right;
+}
+.ns-dark .player-score {
+    color: white;
+}
+
+.player-status-active {
+    background-color: #f3f4f6;
+    border-width: 1;
+    border-color: #3b82f6;
+}
+.ns-dark .player-status-active {
+    background-color: #1f2937;
+    border-color: #3b82f6;
+}
+
+.reorder-handle {
+    color: #9ca3af;
+}

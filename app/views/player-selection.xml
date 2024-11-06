@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Add Players" />
+    <StackLayout class="p-4">
+        <GridLayout rows="auto" columns="*, auto" class="m-4">
+            <TextField col="0" hint="Enter player name" text="{{ playerName }}" class="input" />
+            <Button col="1" text="Add" tap="{{ addPlayer }}" class="btn btn-primary" />
+        </GridLayout>
+
+        <ListView items="{{ players }}" height="300" class="m-4">
+            <ListView.itemTemplate>
+                <Label text="{{ name }}" class="player-name p-2" />
+            </ListView.itemTemplate>
+        </ListView>
+
+        <Button text="Continue" tap="{{ onContinue }}" class="btn btn-primary" isEnabled="{{ players.length > 1 }}" />
+    </StackLayout>
+</Page>

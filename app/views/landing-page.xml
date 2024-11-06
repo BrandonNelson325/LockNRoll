@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Lock N' Roll" />
+    <StackLayout class="p-4">
+        <Label text="Lock N' Roll" class="title" />
+        <Button text="New Game" tap="{{ onNewGame }}" class="btn btn-primary" />
+    </StackLayout>
+</Page>

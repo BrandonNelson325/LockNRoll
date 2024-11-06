@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Lock N' Roll" />
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="{{ 'Round ' + currentRound }}" class="title" />
+            <Label text="{{ 'Current Player: ' + currentPlayer }}" class="subtitle" />
+            <Label text="{{ 'Round Score: ' + roundScore }}" class="subtitle" />
+            
+            <GridLayout columns="*, *, *" rows="auto, auto, auto, auto" class="m-4">
+                <Button row="0" col="0" text="2" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                <Button row="0" col="1" text="3" tap="{{ onScore }}" class="btn btn-primary" />
+                <Button row="0" col="2" text="4" tap="{{ onScore }}" class="btn btn-primary" />
+                
+                <Button row="1" col="0" text="5" tap="{{ onScore }}" class="btn btn-primary" />
+                <Button row="1" col="1" text="6" tap="{{ onScore }}" class="btn btn-primary" />
+                <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-primary' : 'btn btn-danger' }}" />
+                
+                <Button row="2" col="0" text="8" tap="{{ onScore }}" class="btn btn-primary" />
+                <Button row="2" col="1" text="9" tap="{{ onScore }}" class="btn btn-primary" />
+                <Button row="2" col="2" text="10" tap="{{ onScore }}" class="btn btn-primary" />
+                
+                <Button row="3" col="0" text="11" tap="{{ onScore }}" class="btn btn-primary" />
+                <Button row="3" col="1" text="12" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+            </GridLayout>
+
+            <StackLayout class="m-4 p-2 bg-white">
+                <Repeater items="{{ players }}">
+                    <Repeater.itemTemplate>
+                        <GridLayout columns="*, *, auto" class="player-status {{ isCurrentPlayer ? 'player-status-active' : '' }}">
+                            <Label col="0" text="{{ name }}" class="player-name" />
+                            <Label col="1" text="{{ totalScore }}" class="player-score" />
+                            <Button col="2" 
+                                    text="{{ isLocked ? 'Locked' : 'Lock' }}" 
+                                    tap="{{ $parents['Page'].onLockTap }}"
+                                    class="{{ isLocked ? 'btn btn-disabled' : 'btn btn-primary' }}"
+                                    isEnabled="{{ !isLocked }}" />
+                        </GridLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>
