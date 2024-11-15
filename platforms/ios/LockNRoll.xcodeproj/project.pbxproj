@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3093D383C6BF42DEB97E4592 /* NativeScriptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 48739C3C2C1046EB903DF821 /* NativeScriptUtils.m */; };
 		39940D9122C4EF600050DDE1 /* NativeScript.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39940D8C22C4EAAA0050DDE1 /* NativeScript.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39940E1C22C5DFFF0050DDE1 /* TKLiveSync.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39940E1B22C5DFFF0050DDE1 /* TKLiveSync.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5611F69D31E146E7AE4743FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A8506E1DDB4DE7A642D41A /* LaunchScreen.storyboard */; };
+		5C55B16DA4C148F58C04030C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA82F5953D0D4F65967F229B /* Assets.xcassets */; };
+		70CE7456D70E46EC8C22E2D4 /* TNSWidgets.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59B37662D2514928BF035EDE /* TNSWidgets.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
+		BB70A9800248412A8FB2692A /* TNSWidgets.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B37662D2514928BF035EDE /* TNSWidgets.xcframework */; };
 		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
 		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
-		5C55B16DA4C148F58C04030C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA82F5953D0D4F65967F229B /* Assets.xcassets */; };
-		5611F69D31E146E7AE4743FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A8506E1DDB4DE7A642D41A /* LaunchScreen.storyboard */; };
+		E7BFFC8838514AE69C347C18 /* UIView+NativeScript.m in Sources */ = {isa = PBXBuildFile; fileRef = CC520F49A51946E89D3B930C /* UIView+NativeScript.m */; };
 		E99C8070E8BD4476B534E214 /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7D23CA2023844221B1BCE290 /* build.xcconfig */; };
 		F1C5AF8353744395ADFBDACA /* NativeScriptEmbedder.m in Sources */ = {isa = PBXBuildFile; fileRef = F49EB0BCCE654D90B023EB9B /* NativeScriptEmbedder.m */; };
-		3093D383C6BF42DEB97E4592 /* NativeScriptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 48739C3C2C1046EB903DF821 /* NativeScriptUtils.m */; };
-		E7BFFC8838514AE69C347C18 /* UIView+NativeScript.m in Sources */ = {isa = PBXBuildFile; fileRef = CC520F49A51946E89D3B930C /* UIView+NativeScript.m */; };
-		BB70A9800248412A8FB2692A /* TNSWidgets.xcframework in Resources */ = {isa = PBXBuildFile; fileRef = 59B37662D2514928BF035EDE /* TNSWidgets.xcframework */; };
-		70CE7456D70E46EC8C22E2D4 /* TNSWidgets.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59B37662D2514928BF035EDE /* TNSWidgets.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01E6A4BC3363443493BD5195 /* UIView+NativeScript.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "UIView+NativeScript.h"; path = "../../node_modules/@nativescript/core/platforms/ios/src/UIView+NativeScript.h"; sourceTree = "<group>"; };
 		391174B521F1D7BF00BA2583 /* nativescript-build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "nativescript-build.xcconfig"; path = "internal/nativescript-build.xcconfig"; sourceTree = SOURCE_ROOT; };
 		391174B721F1D99900BA2583 /* plugins-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "plugins-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		391174B821F1D99900BA2583 /* plugins-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "plugins-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -50,28 +51,27 @@
 		42C751E4232B769100186695 /* nsld.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = nsld.sh; path = internal/nsld.sh; sourceTree = SOURCE_ROOT; };
 		42C751E5232B769100186695 /* nativescript-post-build */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "nativescript-post-build"; path = "internal/nativescript-post-build"; sourceTree = SOURCE_ROOT; };
 		42C751E6232B769100186695 /* nativescript-pre-build */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "nativescript-pre-build"; path = "internal/nativescript-pre-build"; sourceTree = SOURCE_ROOT; };
+		48739C3C2C1046EB903DF821 /* NativeScriptUtils.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = NativeScriptUtils.m; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptUtils.m"; sourceTree = "<group>"; };
+		51573788B81943579331823B /* NativeScriptUtils.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = NativeScriptUtils.h; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptUtils.h"; sourceTree = "<group>"; };
+		59B37662D2514928BF035EDE /* TNSWidgets.xcframework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = TNSWidgets.xcframework; path = "../../node_modules/@nativescript/core/platforms/ios/TNSWidgets.xcframework"; sourceTree = "<group>"; };
+		5E70670641934758AC502496 /* NativeScriptEmbedder.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = NativeScriptEmbedder.h; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptEmbedder.h"; sourceTree = "<group>"; };
+		6AD6E49369064CD682878160 /* module.modulemap */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "../../node_modules/@nativescript/core/platforms/ios/src/module.modulemap"; sourceTree = "<group>"; };
+		74A8506E1DDB4DE7A642D41A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = LockNRoll/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D23CA2023844221B1BCE290 /* build.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = LockNRoll/Resources/build.xcconfig; sourceTree = "<group>"; };
 		858B832E18CA111C00AB12DE /* LockNRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockNRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858B833918CA111C00AB12DE /* LockNRoll-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LockNRoll-Info.plist"; sourceTree = "<group>"; };
 		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		858B833F18CA111C00AB12DE /* LockNRoll-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LockNRoll-Prefix.pch"; sourceTree = "<group>"; };
 		858B843318CA22B800AB12DE /* LockNRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockNRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930F05DB22671AE300D269DC /* Swift-ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Swift-ObjC-Bridging-Header.h"; path = "internal/Swift-ObjC-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		BA82F5953D0D4F65967F229B /* Assets.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LockNRoll/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		CC520F49A51946E89D3B930C /* UIView+NativeScript.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UIView+NativeScript.m"; path = "../../node_modules/@nativescript/core/platforms/ios/src/UIView+NativeScript.m"; sourceTree = "<group>"; };
 		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
 		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
 		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
 		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
 		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
-		BA82F5953D0D4F65967F229B /* Assets.xcassets */ = {isa = PBXFileReference; name = Assets.xcassets; path = "LockNRoll/Resources/Assets.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
-		74A8506E1DDB4DE7A642D41A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; name = LaunchScreen.storyboard; path = "LockNRoll/Resources/LaunchScreen.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7D23CA2023844221B1BCE290 /* build.xcconfig */ = {isa = PBXFileReference; name = build.xcconfig; path = "LockNRoll/Resources/build.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
-		5E70670641934758AC502496 /* NativeScriptEmbedder.h */ = {isa = PBXFileReference; name = NativeScriptEmbedder.h; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptEmbedder.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		F49EB0BCCE654D90B023EB9B /* NativeScriptEmbedder.m */ = {isa = PBXFileReference; name = NativeScriptEmbedder.m; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptEmbedder.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		51573788B81943579331823B /* NativeScriptUtils.h */ = {isa = PBXFileReference; name = NativeScriptUtils.h; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptUtils.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		48739C3C2C1046EB903DF821 /* NativeScriptUtils.m */ = {isa = PBXFileReference; name = NativeScriptUtils.m; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptUtils.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		01E6A4BC3363443493BD5195 /* UIView+NativeScript.h */ = {isa = PBXFileReference; name = "UIView+NativeScript.h"; path = "../../node_modules/@nativescript/core/platforms/ios/src/UIView+NativeScript.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		CC520F49A51946E89D3B930C /* UIView+NativeScript.m */ = {isa = PBXFileReference; name = "UIView+NativeScript.m"; path = "../../node_modules/@nativescript/core/platforms/ios/src/UIView+NativeScript.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		6AD6E49369064CD682878160 /* module.modulemap */ = {isa = PBXFileReference; name = module.modulemap; path = "../../node_modules/@nativescript/core/platforms/ios/src/module.modulemap"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = sourcecode.module-map; explicitFileType = undefined; includeInIndex = 0; };
-		59B37662D2514928BF035EDE /* TNSWidgets.xcframework */ = {isa = PBXFileReference; name = TNSWidgets.xcframework; path = "../../node_modules/@nativescript/core/platforms/ios/TNSWidgets.xcframework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F49EB0BCCE654D90B023EB9B /* NativeScriptEmbedder.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = NativeScriptEmbedder.m; path = "../../node_modules/@nativescript/core/platforms/ios/src/NativeScriptEmbedder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB70A9800248412A8FB2692A /* TNSWidgets.xcframework in Resources */,
+				BB70A9800248412A8FB2692A /* TNSWidgets.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,8 +114,8 @@
 				858B833718CA111C00AB12DE /* LockNRoll */,
 				858B833018CA111C00AB12DE /* Frameworks */,
 				858B832F18CA111C00AB12DE /* Products */,
-				57B7D7A2BB5B4BC1B80749A1 /* NSNativeSources */,
 				B302B496A2504FD1BE8B92CD /* @nativescript/core */,
+				B6462E05F8C4454F8953D741 /* NSNativeSources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,23 +166,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E070579D1B39A9D000214BF1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BA82F5953D0D4F65967F229B /* Assets.xcassets */,
-				74A8506E1DDB4DE7A642D41A /* LaunchScreen.storyboard */,
-				7D23CA2023844221B1BCE290 /* build.xcconfig */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		57B7D7A2BB5B4BC1B80749A1 /* NSNativeSources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NSNativeSources;
-			sourceTree = "<group>";
-		};
 		B302B496A2504FD1BE8B92CD /* @nativescript/core */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +178,23 @@
 				6AD6E49369064CD682878160 /* module.modulemap */,
 			);
 			name = "@nativescript/core";
+			sourceTree = "<group>";
+		};
+		B6462E05F8C4454F8953D741 /* NSNativeSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSNativeSources;
+			sourceTree = "<group>";
+		};
+		E070579D1B39A9D000214BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA82F5953D0D4F65967F229B /* Assets.xcassets */,
+				74A8506E1DDB4DE7A642D41A /* LaunchScreen.storyboard */,
+				7D23CA2023844221B1BCE290 /* build.xcconfig */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,8 +467,15 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = LockNRoll/LockNRoll.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CURRENT_PROJECT_VERSION = 2024110601;
+				DEVELOPMENT_TEAM = GKG4FZ867D;
 				ENABLE_BITCODE = NO;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../../node_modules/@nativescript/core/platforms/ios\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LockNRoll/LockNRoll-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -483,18 +490,17 @@
 					"\"$(SRCROOT)/../../node_modules/@nativescript/core/platforms/ios/src\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/LockNRoll/LockNRoll-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Lock N' Roll";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.dice-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nelsontech.locknroll;
 				PRODUCT_NAME = LockNRoll;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"../../node_modules/@nativescript/core/platforms/ios\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.nativescript.game";
 			};
 			name = Debug;
 		};
@@ -504,8 +510,15 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_ENTITLEMENTS = LockNRoll/LockNRoll.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CURRENT_PROJECT_VERSION = 2024110601;
+				DEVELOPMENT_TEAM = GKG4FZ867D;
 				ENABLE_BITCODE = NO;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../../node_modules/@nativescript/core/platforms/ios\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LockNRoll/LockNRoll-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -516,18 +529,17 @@
 					"\"$(SRCROOT)/../../node_modules/@nativescript/core/platforms/ios/src\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/LockNRoll/LockNRoll-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Lock N' Roll";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.dice-games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nelsontech.locknroll;
 				PRODUCT_NAME = LockNRoll;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"../../node_modules/@nativescript/core/platforms/ios\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.nativescript.game";
 			};
 			name = Release;
 		};
