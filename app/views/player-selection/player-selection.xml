@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <ActionBar title="Add Players" />
-    <ScrollView>
-        <StackLayout class="p-4">
-            <Label text="Add Players" class="title" />
-            <Label text="Add at least 2 players to continue" class="subtitle" />
-            
-            <GridLayout rows="auto" columns="*, auto" class="m-4">
-                <TextField col="0" 
-                    hint="Enter player name" 
-                    text="{{ playerName }}" 
-                    returnKeyType="done"
-                    returnPress="{{ addPlayer }}"
-                    class="input" />
-                <Button col="1" 
-                    text="Add" 
-                    tap="{{ addPlayer }}" 
-                    class="btn btn-primary" 
-                    isEnabled="{{ playerName.length > 0 }}" />
-            </GridLayout>
+    <GridLayout rows="*, auto">
+        <ScrollView row="0">
+            <StackLayout class="p-4">
+                <Label text="Add Players" class="title" />
+                <Label text="Add at least 2 players to continue" class="subtitle" />
+                
+                <GridLayout rows="auto" columns="*, auto" class="m-4">
+                    <TextField col="0" 
+                        hint="Enter player name" 
+                        text="{{ playerName }}" 
+                        returnKeyType="done"
+                        returnPress="{{ addPlayer }}"
+                        class="input" />
+                    <Button col="1" 
+                        text="Add" 
+                        tap="{{ addPlayer }}" 
+                        class="btn btn-primary" 
+                        isEnabled="{{ playerName.length > 0 }}" />
+                </GridLayout>
 
-            <!-- Players List -->
-            <StackLayout class="m-2">
-                <Repeater items="{{ players }}">
-                    <Repeater.itemTemplate>
-                        <GridLayout columns="auto, auto, *, auto" class="player-status-compact">
-                            <!-- Up/Down Arrows -->
-                            <StackLayout col="0" orientation="horizontal">
-                                <Button text="↑" 
-                                    tap="{{ moveUp }}" 
-                                    class="btn-icon-compact" 
-                                    color="{{ canMoveUp ? '#3b82f6' : '#9ca3af' }}"
-                                    isEnabled="{{ canMoveUp }}"
-                                    fontSize="20" />
-                                <Button text="↓" 
-                                    tap="{{ moveDown }}" 
-                                    class="btn-icon-compact" 
-                                    color="{{ canMoveDown ? '#3b82f6' : '#9ca3af' }}"
-                                    isEnabled="{{ canMoveDown }}"
-                                    fontSize="20" />
-                            </StackLayout>
-                            
-                            <!-- Player Name -->
-                            <TextField col="2" 
-                                text="{{ name }}" 
-                                class="input-compact" 
-                                returnKeyType="done"
-                                returnPress="{{ updateName }}" />
+                <!-- Players List -->
+                <StackLayout class="m-2">
+                    <Repeater items="{{ players }}">
+                        <Repeater.itemTemplate>
+                            <GridLayout columns="auto, auto, *, auto" class="player-status-compact">
+                                <!-- Up/Down Arrows -->
+                                <StackLayout col="0" orientation="horizontal">
+                                    <Button text="↑" 
+                                        tap="{{ moveUp }}" 
+                                        class="btn-icon-compact" 
+                                        color="{{ canMoveUp ? '#3b82f6' : '#9ca3af' }}"
+                                        isEnabled="{{ canMoveUp }}"
+                                        fontSize="20" />
+                                    <Button text="↓" 
+                                        tap="{{ moveDown }}" 
+                                        class="btn-icon-compact" 
+                                        color="{{ canMoveDown ? '#3b82f6' : '#9ca3af' }}"
+                                        isEnabled="{{ canMoveDown }}"
+                                        fontSize="20" />
+                                </StackLayout>
                                 
-                            <!-- Delete Button -->
-                            <Button col="3" 
-                                text="✕" 
-                                tap="{{ remove }}" 
-                                class="btn-icon-compact" 
-                                color="#ef4444"
-                                fontSize="16" />
-                        </GridLayout>
-                    </Repeater.itemTemplate>
-                </Repeater>
-            </StackLayout>
+                                <!-- Player Name -->
+                                <TextField col="2" 
+                                    text="{{ name }}" 
+                                    class="input-compact" 
+                                    returnKeyType="done"
+                                    returnPress="{{ updateName }}" />
+                                    
+                                <!-- Delete Button -->
+                                <Button col="3" 
+                                    text="✕" 
+                                    tap="{{ remove }}" 
+                                    class="btn-icon-compact" 
+                                    color="#ef4444"
+                                    fontSize="16" />
+                            </GridLayout>
+                        </Repeater.itemTemplate>
+                    </Repeater>
+                </StackLayout>
 
-            <Button 
-                text="Continue" 
-                tap="{{ onContinue }}" 
-                class="{{ canContinue ? 'btn btn-primary' : 'btn btn-disabled' }}"
-                isEnabled="{{ canContinue }}"
-                margin="16 4" />
-        </StackLayout>
-    </ScrollView>
+                <Button 
+                    text="Continue" 
+                    tap="{{ onContinue }}" 
+                    class="{{ canContinue ? 'btn btn-primary' : 'btn btn-disabled' }}"
+                    isEnabled="{{ canContinue }}"
+                    margin="16 4" />
+            </StackLayout>
+        </ScrollView>
+        <!-- Ad Space -->
+        <StackLayout row="1" class="ad-container" />
+    </GridLayout>
 </Page>

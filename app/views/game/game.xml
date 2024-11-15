@@ -4,92 +4,96 @@
         <ActionItem text="New Game" tap="{{ onNewGame }}" ios.position="left" android.position="actionBar" />
         <ActionItem text="{{ isEditMode ? 'Done' : 'Edit' }}" tap="{{ toggleEditMode }}" ios.position="right" android.position="actionBar" />
     </ActionBar>
-    <ScrollView>
-        <StackLayout class="p-4">
-            <Label text="{{ 'Round ' + currentRound }}" class="game-info" />
-            <Label text="{{ 'Current Player: ' + currentPlayer }}" class="game-info" />
-            <Label text="{{ 'Round Score: ' + roundScore }}" class="game-info" />
-            
-            <!-- Undo Button -->
-            <Button text="↩️" 
-                tap="{{ onUndo }}" 
-                class="btn-icon"
-                isEnabled="{{ canUndo }}"
-                opacity="{{ canUndo ? 1 : 0.5 }}"
-                fontSize="24"
-                margin="0 4 8 4" />
-            
-            <!-- Score Buttons -->
-            <GridLayout columns="*, *, *" rows="auto, auto, auto, auto" class="m-4">
-                <Button row="0" col="0" text="2" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
-                <Button row="0" col="1" text="3" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="0" col="2" text="4" tap="{{ onScore }}" class="btn btn-primary" />
+    <GridLayout rows="*, auto">
+        <ScrollView row="0">
+            <StackLayout class="p-4">
+                <Label text="{{ 'Round ' + currentRound }}" class="game-info" />
+                <Label text="{{ 'Current Player: ' + currentPlayer }}" class="game-info" />
+                <Label text="{{ 'Round Score: ' + roundScore }}" class="game-info" />
                 
-                <Button row="1" col="0" text="5" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="1" col="1" text="6" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-primary' : 'btn btn-danger' }}" />
+                <!-- Undo Button -->
+                <Button text="↩️" 
+                    tap="{{ onUndo }}" 
+                    class="btn-icon"
+                    isEnabled="{{ canUndo }}"
+                    opacity="{{ canUndo ? 1 : 0.5 }}"
+                    fontSize="24"
+                    margin="0 4 8 4" />
                 
-                <Button row="2" col="0" text="8" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="2" col="1" text="9" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="2" col="2" text="10" tap="{{ onScore }}" class="btn btn-primary" />
-                
-                <Button row="3" col="0" text="11" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="3" col="1" text="12" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
-                <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
-            </GridLayout>
+                <!-- Score Buttons -->
+                <GridLayout columns="*, *, *" rows="auto, auto, auto, auto" class="m-4">
+                    <Button row="0" col="0" text="2" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                    <Button row="0" col="1" text="3" tap="{{ onScore }}" class="btn btn-primary" />
+                    <Button row="0" col="2" text="4" tap="{{ onScore }}" class="btn btn-primary" />
+                    
+                    <Button row="1" col="0" text="5" tap="{{ onScore }}" class="btn btn-primary" />
+                    <Button row="1" col="1" text="6" tap="{{ onScore }}" class="btn btn-primary" />
+                    <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-primary' : 'btn btn-danger' }}" />
+                    
+                    <Button row="2" col="0" text="8" tap="{{ onScore }}" class="btn btn-primary" />
+                    <Button row="2" col="1" text="9" tap="{{ onScore }}" class="btn btn-primary" />
+                    <Button row="2" col="2" text="10" tap="{{ onScore }}" class="btn btn-primary" />
+                    
+                    <Button row="3" col="0" text="11" tap="{{ onScore }}" class="btn btn-primary" />
+                    <Button row="3" col="1" text="12" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                    <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                </GridLayout>
 
-            <!-- Players Section -->
-            <StackLayout>
-                <Repeater items="{{ players }}">
-                    <Repeater.itemTemplate>
-                        <GridLayout columns="auto, auto, auto, *, auto, auto" class="player-status {{ isCurrentPlayer ? 'player-status-active' : '' }}">
-                            <!-- Up/Down Arrows -->
-                            <StackLayout col="0" orientation="horizontal" visibility="{{ isEditMode ? 'visible' : 'collapsed' }}">
-                                <Button text="↑" 
-                                    tap="{{ moveUp }}" 
-                                    class="btn-icon-compact" 
-                                    color="{{ canMoveUp ? '#3b82f6' : '#9ca3af' }}"
-                                    isEnabled="{{ canMoveUp }}"
-                                    fontSize="20" />
-                                <Button text="↓" 
-                                    tap="{{ moveDown }}" 
-                                    class="btn-icon-compact" 
-                                    color="{{ canMoveDown ? '#3b82f6' : '#9ca3af' }}"
-                                    isEnabled="{{ canMoveDown }}"
-                                    fontSize="20" />
-                            </StackLayout>
-                            
-                            <!-- Edit Name Button -->
-                            <Button col="1" 
-                                text="✏️" 
-                                tap="{{ editName }}" 
-                                class="btn-icon-compact" 
-                                fontSize="16"
-                                visibility="{{ isEditMode ? 'visible' : 'collapsed' }}" />
+                <!-- Players Section -->
+                <StackLayout>
+                    <Repeater items="{{ players }}">
+                        <Repeater.itemTemplate>
+                            <GridLayout columns="auto, auto, auto, *, auto, auto" class="player-status {{ isCurrentPlayer ? 'player-status-active' : '' }}">
+                                <!-- Up/Down Arrows -->
+                                <StackLayout col="0" orientation="horizontal" visibility="{{ isEditMode ? 'visible' : 'collapsed' }}">
+                                    <Button text="↑" 
+                                        tap="{{ moveUp }}" 
+                                        class="btn-icon-compact" 
+                                        color="{{ canMoveUp ? '#3b82f6' : '#9ca3af' }}"
+                                        isEnabled="{{ canMoveUp }}"
+                                        fontSize="20" />
+                                    <Button text="↓" 
+                                        tap="{{ moveDown }}" 
+                                        class="btn-icon-compact" 
+                                        color="{{ canMoveDown ? '#3b82f6' : '#9ca3af' }}"
+                                        isEnabled="{{ canMoveDown }}"
+                                        fontSize="20" />
+                                </StackLayout>
                                 
-                            <!-- Player Name and Score -->
-                            <Label col="2" text="{{ name }}" class="player-name" />
-                            <Label col="3" text="{{ totalScore }}" class="player-score" />
-                            
-                            <!-- Lock/Unlock Button -->
-                            <Button col="4" 
-                                text="{{ isLocked ? (canUnlock ? 'Unlock' : 'Locked') : 'Lock' }}" 
-                                tap="{{ isLocked ? (canUnlock ? unlock : null) : lock }}"
-                                class="{{ isLocked ? (canUnlock ? 'btn btn-success' : 'btn btn-disabled') : 'btn btn-primary' }}"
-                                isEnabled="{{ !isLocked || canUnlock }}" />
+                                <!-- Edit Name Button -->
+                                <Button col="1" 
+                                    text="✏️" 
+                                    tap="{{ editName }}" 
+                                    class="btn-icon-compact" 
+                                    fontSize="16"
+                                    visibility="{{ isEditMode ? 'visible' : 'collapsed' }}" />
+                                    
+                                <!-- Player Name and Score -->
+                                <Label col="2" text="{{ name }}" class="player-name" />
+                                <Label col="3" text="{{ totalScore }}" class="player-score" />
                                 
-                            <!-- Delete Button -->
-                            <Button col="5" 
-                                text="✕" 
-                                tap="{{ remove }}" 
-                                class="btn-icon-compact" 
-                                color="#ef4444"
-                                fontSize="20"
-                                visibility="{{ isEditMode && canDelete ? 'visible' : 'collapsed' }}" />
-                        </GridLayout>
-                    </Repeater.itemTemplate>
-                </Repeater>
+                                <!-- Lock/Unlock Button -->
+                                <Button col="4" 
+                                    text="{{ isLocked ? (canUnlock ? 'Unlock' : 'Locked') : 'Lock' }}" 
+                                    tap="{{ isLocked ? (canUnlock ? unlock : null) : lock }}"
+                                    class="{{ isLocked ? (canUnlock ? 'btn btn-success' : 'btn btn-disabled') : 'btn btn-primary' }}"
+                                    isEnabled="{{ !isLocked || canUnlock }}" />
+                                    
+                                <!-- Delete Button -->
+                                <Button col="5" 
+                                    text="✕" 
+                                    tap="{{ remove }}" 
+                                    class="btn-icon-compact" 
+                                    color="#ef4444"
+                                    fontSize="20"
+                                    visibility="{{ isEditMode && canDelete ? 'visible' : 'collapsed' }}" />
+                            </GridLayout>
+                        </Repeater.itemTemplate>
+                    </Repeater>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
-    </ScrollView>
+        </ScrollView>
+        <!-- Ad Space -->
+        <StackLayout row="1" class="ad-container" />
+    </GridLayout>
 </Page>

@@ -171,3 +171,12 @@
 .reorder-handle {
     color: #9ca3af;
 }
+
+.ad-container {
+    height: 50;
+    background-color: #e5e7eb;
+    margin-top: 8;
+}
+.ns-dark .ad-container {
+    background-color: #374151;
+}

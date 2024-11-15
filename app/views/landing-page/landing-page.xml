@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <ActionBar title="Lock N' Roll" />
-    <GridLayout>
-        <StackLayout verticalAlignment="center" horizontalAlignment="center">
-            <!-- Logo Placeholder -->
-            <Image src="~/views/assets/logo.png" stretch="aspectFit" margin="32" />
+    <GridLayout rows="*, auto">
+        <StackLayout row="0" verticalAlignment="center" horizontalAlignment="center">
+            <!-- Logo -->
+            <Image src="~/assets/logo.png" width="200" height="200" stretch="aspectFit" margin="32" />
             <Label text="Lock N' Roll" class="title" />
             <Button text="New Game" tap="{{ onNewGame }}" class="btn btn-primary" margin="16" />
         </StackLayout>
+        <!-- Ad Space -->
+        <StackLayout row="1" class="ad-container" />
     </GridLayout>
 </Page>
