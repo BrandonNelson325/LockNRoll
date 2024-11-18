@@ -4,7 +4,7 @@
     <GridLayout rows="*, auto">
         <StackLayout row="0" verticalAlignment="center" horizontalAlignment="center">
             <!-- Logo -->
-            <Image src="~/assets/logo.png" width="200" height="200" stretch="aspectFit" margin="32" />
+            <Image src="~/views/assets/logo.png" width="200" height="200" stretch="aspectFit" margin="32" />
             <Label text="Lock N' Roll" class="title" />
             <Button text="New Game" tap="{{ onNewGame }}" class="btn btn-primary" margin="16" />
         </StackLayout>

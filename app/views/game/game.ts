@@ -360,7 +360,6 @@ class GameViewModel extends Observable {
         if (player.isLocked) return;
 
         const wasCurrentPlayer = player.isCurrentPlayer;
-        const oldScore = player.totalScore;
         player.addScore(this._roundScore);
         player.isLocked = true;
 
@@ -390,7 +389,6 @@ class GameViewModel extends Observable {
         player.removeScore();
         player.isLocked = false;
 
-        // If this player was the current player when they locked, make them current again
         const playerIndex = this._players.indexOf(player);
         const lastLockMove = [...this._moveHistory].reverse().find(
             move => move.type === 'lock' && move.playerIndex === playerIndex
@@ -459,12 +457,14 @@ class GameViewModel extends Observable {
         console.log(`Starting round ${this._currentRound}`);
         this._roundScore = 0;
         this._rollCount = 0;
-        this._currentPlayerIndex = 0;
         this._moveHistory = [];
+        
+        // Continue with next player instead of resetting to first
+        this._currentPlayerIndex = (this._currentPlayerIndex + 1) % this._players.length;
         
         this._players.forEach((player, index) => {
             player.resetForNewRound();
-            player.isCurrentPlayer = index === 0;
+            player.isCurrentPlayer = index === this._currentPlayerIndex;
         });
         
         this.notifyPropertyChanges();
