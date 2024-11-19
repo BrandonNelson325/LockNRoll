@@ -1,10 +1,10 @@
 {
-  "B302B496A2504FD1BE8B92CD": {
-    "path": "/Users/bnelson/PersonalDev/LockNRoll/node_modules/@nativescript/core/platforms/ios/src",
-    "name": "@nativescript/core"
-  },
-  "B6462E05F8C4454F8953D741": {
+  "2FCB1AE134FB49999C7ABA06": {
     "path": "/Users/bnelson/PersonalDev/LockNRoll/App_Resources/iOS/src",
     "name": "NSNativeSources"
+  },
+  "E5B6FB8C7B4E4692A5907734": {
+    "path": "/Users/bnelson/PersonalDev/LockNRoll/node_modules/@nativescript/core/platforms/ios/src",
+    "name": "@nativescript/core"
   }
 }
