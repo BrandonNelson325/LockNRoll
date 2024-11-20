@@ -62,6 +62,18 @@ class GameViewModel extends Observable {
         return this._players[this._currentPlayerIndex]?.name || '';
     }
 
+    get currentLeader() {
+        let highscore = 0
+        let leader = ''
+        this._players.forEach((player, index) => {
+            if (player.totalScore > highscore) {
+                leader = player.name
+            }
+        });
+        console.log(leader)
+        return leader || ''
+    }
+
     get rollCount() {
         return this._rollCount;
     }
@@ -172,6 +184,7 @@ class GameViewModel extends Observable {
         this.notifyPropertyChange('currentRound', this._currentRound);
         this.notifyPropertyChange('roundScore', this._roundScore);
         this.notifyPropertyChange('currentPlayer', this.currentPlayer);
+        this.notifyPropertyChange('currentLeader', this.currentLeader);
         this.notifyPropertyChange('rollCount', this._rollCount);
         this.notifyPropertyChange('players', this._players);
     }

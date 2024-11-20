@@ -6,15 +6,15 @@
 	<dict>
 		<key>AppIcon60x60@2x.png</key>
 		<data>
-		66n1e1PoiX8wHl5f6Au2Un4/uJM=
+		AH+olneUFt6D7Rm/YqS7WlmkzYw=
 		</data>
 		<key>AppIcon76x76@2x~ipad.png</key>
 		<data>
-		xJrLrMIBfT1iq7xfm3cgJcQbhS0=
+		vugA2cYjEnJc3H0xIItvTp660Eo=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		mqMRTVO7HLTG0rceHrc2q1v8wpg=
+		2tQXg9HKyakkFh0J8bYxd5MeCL8=
 		</data>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>app/bundle.js</key>
 		<data>
-		mnkZXgFZrHAmmKAB7JbMywfuzHc=
+		hm2XheSIJZuhNolV0mUGDx2PIeE=
 		</data>
 		<key>app/package.json</key>
 		<data>
@@ -160,21 +160,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GgkDRQWUugGxK77FpxLPTq1WFiBwfypHARPAnD5Lvv8=
+			FhqmpeFIAKqN99+sTAAL4n6//R9FgzweK/b2iaCATLc=
 			</data>
 		</dict>
 		<key>AppIcon76x76@2x~ipad.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QPV01cyv1YSKNgbVPJLA5k6XmWIJByuUr9W2L4UOVw8=
+			q3QQFEnjYDo/yTpVSY6X/3KbhJ0Jbc4ohWJOp2c5OVg=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rhglqHvmjE4nd2pdOrURWfpucopI5HLWmQnuY+FDcso=
+			tLaqbnpLb0X+YSPMazWOTuYilPqN8+6Ctc4fjOeKXFs=
 			</data>
 		</dict>
 		<key>Frameworks/NativeScript.framework/Info.plist</key>
@@ -342,7 +342,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dB7W+rXCX7AGYYEQLgBI3Juh/KQQ1KM2a4JKW6tyias=
+			FIqvAwfUcpl7+ZjOyUwh5yGB/GhxxA/sGtUjtvkZ/Yw=
 			</data>
 		</dict>
 		<key>app/package.json</key>

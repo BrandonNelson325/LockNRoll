@@ -9,6 +9,7 @@
             <StackLayout class="p-4">
                 <Label text="{{ 'Round ' + currentRound }}" class="game-info" />
                 <Label text="{{ 'Current Player: ' + currentPlayer }}" class="game-info" />
+                <Label text="{{ 'Leader: ' + currentLeader }}" class="game-info" />
                 <Label text="{{ 'Round Score: ' + roundScore }}" class="game-info" />
                 
                 <!-- Undo Button -->

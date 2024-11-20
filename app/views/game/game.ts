@@ -194,6 +194,16 @@ class GameViewModel extends Observable {
     get canDeletePlayers() { return this._roundScore === 0 && this._rollCount === 0 && this._players.length > 2; }
     get canUndo() { return this._moveHistory.length > 0; }
     get isEditMode() { return this._isEditMode; }
+    get currentLeader() {
+        let highscore = 0
+        let leader = ''
+        this._players.forEach((player, index) => {
+            if (player.totalScore > highscore) {
+                leader = player.name
+            }
+        });
+        return leader || ''
+    }
 
     toggleEditMode() {
         this._isEditMode = !this._isEditMode;
@@ -495,6 +505,7 @@ class GameViewModel extends Observable {
         this.notifyPropertyChange('currentRound', this._currentRound);
         this.notifyPropertyChange('roundScore', this._roundScore);
         this.notifyPropertyChange('currentPlayer', this.currentPlayer);
+        this.notifyPropertyChange('currentLeader', this.currentLeader);
         this.notifyPropertyChange('rollCount', this._rollCount);
         this.notifyPropertyChange('canUndo', this.canUndo);
         this.notifyPropertyChange('canDeletePlayers', this.canDeletePlayers);
