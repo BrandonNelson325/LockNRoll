@@ -13,4 +13,12 @@ class LandingViewModel {
             clearHistory: false
         });
     }
+
+    onRules() {
+        console.log('Navigating to rules page');
+        Frame.topmost().navigate({
+            moduleName: 'views/rules/rules',
+            clearHistory: false
+        });
+    }
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:shared="/views/shared"
+      navigatingTo="onNavigatingTo">
+    <ActionBar title="Rules" />
+    <GridLayout rows="*, auto">
+        <ScrollView row="0">
+            <StackLayout class="p-4">
+                <Label text="Rules and Gameplay" class="title" />
+                
+                <Label text="Before you start" class="subtitle" margin="0 0 8 0" />
+                <Label text="All that you need to play are 2 Dice, This app, and all of your friends!" textWrap="true" class="p-2" />
+                
+                <Label text="Game Play" class="subtitle" margin="16 0 8 0" />
+                <Label text="Each player will roll the dice when it is their turn. The scorekeeper will record the sum of both dice to the app after each roll. Its as simple as that... or is it?" textWrap="true" class="p-2" />
+                
+                <Label text="Scoring" class="subtitle" margin="16 0 8 0" />
+                <Label text="First 3 rounds" class="subtitle" fontSize="16" margin="8 0" />
+                <Label text="• Double 1's (Snake eyes) are worth 200." textWrap="true" class="p-1" />
+                <Label text="• Double 6's (12) are worth 200." textWrap="true" class="p-1" />
+                <Label text="• 7's are worth 100." textWrap="true" class="p-1" />
+                <Label text="• All other numbers are scored as face value." textWrap="true" class="p-1" />
+                <Label text="• No doubles apply except 1's and 6's" textWrap="true" class="p-1" />
+                
+                <Label text="After 3rd round" class="subtitle" fontSize="16" margin="8 0" />
+                <Label text="• Double 1's and Double 6's TRIPLE the rounds current score." textWrap="true" class="p-1" />
+                <Label text="• Any other Double will DOUBLE the rounds current score." textWrap="true" class="p-1" />
+                <Label text="• If a 7 is rolled, the round ENDS." textWrap="true" class="p-1" />
+                <Label text="• All other numbers are scored as face value." textWrap="true" class="p-1" />
+                
+                <Label text="Locking" class="subtitle" margin="16 0 8 0" />
+                <Label text="Between any round, any player can LOCK their score. If the score is getting high, and you are afraid that someone will roll a 7 and end the round, you can lock your score in. This will add the rounds current score to your total, and you will be out for the round. If you do not lock before a 7 is rolled, you are rewarded 0 points for the round" textWrap="true" class="p-2" />
+                
+                <Label text="Winner" class="subtitle" margin="16 0 8 0" />
+                <Label text="To win, you must simply have the most points at the end of all the rounds. Easy, right?" textWrap="true" class="p-2" />
+                
+                <Label text="How to keep score (For the score keeper only)" class="subtitle" margin="16 0 8 0" />
+                <Label text="• Each time a player rolls, you simply click the number they roll. If it is a double, and not in the first 3 rounds, click the 'doubles' button." textWrap="true" class="p-1" />
+                <Label text="• When a player wants to lock their score, simply click the 'Lock N Roll' button, and click the lock icon next to their name. This will lock them and remove them from the list of rollers." textWrap="true" class="p-1" />
+                <Label text="• If a player wants to ask their scores, simply click the 'Lock N Roll' button, and you will see each players current score." textWrap="true" class="p-1" />
+                
+                <Label text="FAQ" class="subtitle" margin="16 0 8 0" />
+                <Label text="1. What is a double?" class="subtitle" fontSize="16" margin="8 0" />
+                <Label text="A double means that both dice that are rolled display the exact same number. ie: when rolled, both dice land with a 4 displayed." textWrap="true" class="p-2" />
+                
+                <Label text="2. Can I choose players that I have played with in the past?" class="subtitle" fontSize="16" margin="8 0" />
+                <Label text="Yes, when you are adding all of your players, click 'Previous Players'. This will take you to a screen that stores all players that have played with you in the past." textWrap="true" class="p-2" />
+                
+                <Label text="3. Can I submit suggestions and bugs?" class="subtitle" fontSize="16" margin="8 0" />
+                <Label text="Yes, please do! Please email: BrandonNelson325@gmail.com" textWrap="true" class="p-2" />
+            </StackLayout>
+        </ScrollView>
+        <shared:ad-container row="1" />
+    </GridLayout>
+</Page>
