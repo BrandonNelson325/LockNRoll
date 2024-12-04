@@ -14,7 +14,7 @@
                 <Label text="Each player will roll the dice when it is their turn. The scorekeeper will record the sum of both dice to the app after each roll. Its as simple as that... or is it?" textWrap="true" class="section-text" />
                 
                 <Label text="Scoring" textWrap="true" class="section-title" />
-                <Label text="First 3 rounds" textWrap="true" class="subsection-title" />
+                <Label text="First 3 rolls" textWrap="true" class="subsection-title" />
                 <StackLayout class="indented-section">
                     <Label text="• Double 1's (Snake eyes) are worth 200." textWrap="true" class="section-text" />
                     <Label text="• Double 6's (12) are worth 200." textWrap="true" class="section-text" />
@@ -23,9 +23,9 @@
                     <Label text="• No doubles apply except 1's and 6's" textWrap="true" class="section-text" />
                 </StackLayout>
                 
-                <Label text="After 3rd round" textWrap="true" class="subsection-title" />
+                <Label text="After 3rd roll" textWrap="true" class="subsection-title" />
                 <StackLayout class="indented-section">
-                    <Label text="• Double 1's and Double 6's TRIPLE the rounds current score." textWrap="true" class="section-text" />
+                    <Label text="• Double 1's and Double 6's multiply the score by 2.5 (100 would become 250)" textWrap="true" class="section-text" />
                     <Label text="• Any other Double will DOUBLE the rounds current score." textWrap="true" class="section-text" />
                     <Label text="• If a 7 is rolled, the round ENDS." textWrap="true" class="section-text" />
                     <Label text="• All other numbers are scored as face value." textWrap="true" class="section-text" />
@@ -38,16 +38,13 @@
                 <Label text="To win, you must simply have the most points at the end of all the rounds. Easy, right?" textWrap="true" class="section-text" />
                 
                 <Label text="How to keep score (For the score keeper only)" textWrap="true" class="section-title" />
-                <Label text="Each time a player rolls, you simply click the number they roll. If it is a double, and not in the first 3 rounds, click the 'doubles' button." textWrap="true" class="section-text" />
-                <Label text="When a player wants to lock their score, simply click the 'Lock N Roll' button, and click the lock icon next to their name. This will lock them and remove them from the list of rollers." textWrap="true" class="section-text" />
-                <Label text="If a player wants to ask their scores, simply click the 'Lock N Roll' button, and you will see each players current score." textWrap="true" class="section-text" />
+                <Label text="Each time a player rolls, you simply click the number they roll. For all doubles besides 1's and 6's, click the doubles button to double the rounds score." textWrap="true" class="section-text" />
+                <Label text="When a player wants to lock their score, simply find their name and click the lock icon next to their name. This will lock them and remove them from the list of rollers for the round. They will resume rolling in the next round." textWrap="true" class="section-text" />
+                <Label text="If you make a mistake, there is an undo button. You can also unlock a player if they change their mind. But this can only be done before the next player rolls." textWrap="true" class="section-text" />
                 
                 <Label text="FAQ" textWrap="true" class="section-title" />
                 <Label text="What is a double?" textWrap="true" class="subsection-title" />
                 <Label text="A double means that both dice that are rolled display the exact same number. ie: when rolled, both dice land with a 4 displayed." textWrap="true" class="section-text" />
-                
-                <Label text="Can I choose players that I have played with in the past?" textWrap="true" class="subsection-title" />
-                <Label text="Yes, when you are adding all of your players, click 'Previous Players'. This will take you to a screen that stores all players that have played with you in the past." textWrap="true" class="section-text" />
                 
                 <Label text="Can I submit suggestions and bugs?" textWrap="true" class="subsection-title" />
                 <Label text="Yes, please do! Please email: BrandonNelson325@gmail.com" textWrap="true" class="section-text" />
