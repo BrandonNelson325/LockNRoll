@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <ActionBar title="Lock N' Roll">
-        <ActionItem text="New Game" tap="{{ onNewGame }}" ios.position="left" android.position="actionBar" />
-        <ActionItem text="Rules" tap="{{ onRules }}" ios.position="right" android.position="actionBar" />
-        <ActionItem text="{{ isEditMode ? 'Done' : 'Edit' }}" tap="{{ toggleEditMode }}" ios.position="right" android.position="actionBar" />
+        <ActionItem text="New Game" tap="{{ onNewGame }}" ios.position="right" android.position="actionBar" />
+        <ActionItem text="Rules&nbsp;&nbsp;&nbsp;&nbsp;" tap="{{ onRules }}" style="margin-right:10px" ios.position="left" android.position="actionBar" />
+        <ActionItem text="{{ isEditMode ? 'Done' : 'Edit' }}" tap="{{ toggleEditMode }}" ios.position="left" android.position="actionBar" />
     </ActionBar>
     <GridLayout rows="*, auto">
         <ScrollView row="0">
