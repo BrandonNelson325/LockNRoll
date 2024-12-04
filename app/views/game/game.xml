@@ -2,6 +2,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <ActionBar title="Lock N' Roll">
         <ActionItem text="New Game" tap="{{ onNewGame }}" ios.position="left" android.position="actionBar" />
+        <ActionItem text="Rules" tap="{{ onRules }}" ios.position="right" android.position="actionBar" />
         <ActionItem text="{{ isEditMode ? 'Done' : 'Edit' }}" tap="{{ toggleEditMode }}" ios.position="right" android.position="actionBar" />
     </ActionBar>
     <GridLayout rows="*, auto">
@@ -23,21 +24,21 @@
                 
                 <!-- Score Buttons -->
                 <GridLayout columns="*, *, *" rows="auto, auto, auto, auto" class="m-4">
-                    <Button row="0" col="0" text="2" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                    <Button row="0" col="0" text="{{ rollCount >= 3 ? '2(2.5x)' : '2(200)' }}" tap="{{ onScore }}" class="btn btn-success" />
                     <Button row="0" col="1" text="3" tap="{{ onScore }}" class="btn btn-primary" />
                     <Button row="0" col="2" text="4" tap="{{ onScore }}" class="btn btn-primary" />
                     
                     <Button row="1" col="0" text="5" tap="{{ onScore }}" class="btn btn-primary" />
                     <Button row="1" col="1" text="6" tap="{{ onScore }}" class="btn btn-primary" />
-                    <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-primary' : 'btn btn-danger' }}" />
+                    <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-danger' }}" />
                     
                     <Button row="2" col="0" text="8" tap="{{ onScore }}" class="btn btn-primary" />
                     <Button row="2" col="1" text="9" tap="{{ onScore }}" class="btn btn-primary" />
                     <Button row="2" col="2" text="10" tap="{{ onScore }}" class="btn btn-primary" />
                     
                     <Button row="3" col="0" text="11" tap="{{ onScore }}" class="btn btn-primary" />
-                    <Button row="3" col="1" text="12" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
-                    <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                    <Button row="3" col="1" text="{{ rollCount >= 3 ? '12(2.5x)' : '12(200)' }}" tap="{{ onScore }}" class="btn btn-success" />
+                    <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-purple' : 'btn btn-disabled' }}" />
                 </GridLayout>
 
                 <!-- Players Section -->

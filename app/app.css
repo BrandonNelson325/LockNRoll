@@ -26,6 +26,26 @@
     background-color: #ef4444;
 }
 
+.btn-warning {
+    background-color: #f59e0b;
+}
+
+.btn-info {
+    background-color: #06b6d4;
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+}
+
+.btn-purple {
+    background-color:blueviolet;
+}
+
+.btn-pink {
+    background-color: #ec4899;
+}
+
 .btn-disabled {
     background-color: #9ca3af;
     opacity: 0.5;
@@ -179,4 +199,49 @@
 }
 .ns-dark .ad-container {
     background-color: #374151;
+}
+
+/* Rules page styles */
+.page-title {
+    color: #1f2937;
+    font-size: 28;
+    font-weight: 800;
+    margin: 16 0;
+}
+.ns-dark .page-title {
+    color: white;
+}
+
+.section-title {
+    color: #1f2937;
+    font-size: 22;
+    font-weight: 700;
+    margin: 20 0 8 0;
+}
+.ns-dark .section-title {
+    color: white;
+}
+
+.subsection-title {
+    color: #374151;
+    font-size: 18;
+    font-weight: 600;
+    margin: 12 0 4 0;
+}
+.ns-dark .subsection-title {
+    color: #e5e7eb;
+}
+
+.section-text {
+    color: #4b5563;
+    font-size: 16;
+    margin: 4 0 8 0;
+    line-height: 1.5;
+}
+.ns-dark .section-text {
+    color: #d1d5db;
+}
+
+.indented-section {
+    padding-left: 16;
 }

@@ -205,6 +205,13 @@ class GameViewModel extends Observable {
         return leader || ''
     }
 
+    onRules() {
+        Frame.topmost().navigate({
+            moduleName: 'views/rules/rules',
+            clearHistory: false
+        });
+    }
+    
     toggleEditMode() {
         this._isEditMode = !this._isEditMode;
         this.notifyPropertyChange('isEditMode', this._isEditMode);
@@ -292,7 +299,8 @@ class GameViewModel extends Observable {
                 this.nextRound();
                 return;
             } else if (value === 2 || value === 12) {
-                return;
+                scoreToAdd = Math.floor(this._roundScore * 2.5) - this._roundScore;
+                this._roundScore = Math.floor(this._roundScore * 2.5);
             } else {
                 scoreToAdd = value;
                 this._roundScore += scoreToAdd;

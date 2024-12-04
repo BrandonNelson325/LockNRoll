@@ -8,21 +8,21 @@
             <Label text="{{ 'Round Score: ' + roundScore }}" class="subtitle" />
             
             <GridLayout columns="*, *, *" rows="auto, auto, auto, auto" class="m-4">
-                <Button row="0" col="0" text="2" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                <Button row="0" col="0" text="2" tap="{{ onScore }}" class="btn btn-success" />
                 <Button row="0" col="1" text="3" tap="{{ onScore }}" class="btn btn-primary" />
                 <Button row="0" col="2" text="4" tap="{{ onScore }}" class="btn btn-primary" />
                 
                 <Button row="1" col="0" text="5" tap="{{ onScore }}" class="btn btn-primary" />
                 <Button row="1" col="1" text="6" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-primary' : 'btn btn-danger' }}" />
+                <Button row="1" col="2" text="7" tap="{{ onScore }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-danger' }}" />
                 
                 <Button row="2" col="0" text="8" tap="{{ onScore }}" class="btn btn-primary" />
                 <Button row="2" col="1" text="9" tap="{{ onScore }}" class="btn btn-primary" />
                 <Button row="2" col="2" text="10" tap="{{ onScore }}" class="btn btn-primary" />
                 
                 <Button row="3" col="0" text="11" tap="{{ onScore }}" class="btn btn-primary" />
-                <Button row="3" col="1" text="12" tap="{{ onScore }}" isEnabled="{{ rollCount < 3 }}" class="{{ rollCount < 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
-                <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-success' : 'btn btn-disabled' }}" />
+                <Button row="3" col="1" text="12" tap="{{ onScore }}" class="btn btn-success" />
+                <Button row="3" col="2" text="Doubles" tap="{{ onDoubles }}" isEnabled="{{ rollCount >= 3 }}" class="{{ rollCount >= 3 ? 'btn btn-purple' : 'btn btn-disabled' }}" />
             </GridLayout>
 
             <StackLayout class="m-4 p-2 bg-white">
